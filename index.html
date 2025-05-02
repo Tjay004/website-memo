@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Talented Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS for animations and interactive elements */
+        .glowing-box {
+            animation: glow 2s infinite;
+        }
+        @keyframes glow {
+            0% { border-color: #f5f5f5; box-shadow: 0 0 5px #f5f5f5; }
+            50% { border-color: #6ee7b7; box-shadow: 0 0 20px #6ee7b7; }
+            100% { border-color: #f5f5f5; box-shadow: 0 0 5px #f5f5f5; }
+        }
+        .moving-icon {
+            animation: moveIcon 1s infinite alternate;
+        }
+        @keyframes moveIcon {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+        .changing-text {
+            animation: changeText 4s infinite;
+        }
+        @keyframes changeText {
+            0%, 25% { content: "Graphic Designer"; }
+            26%, 50% { content: "Web Developer"; }
+            51%, 75% { content: "2D/3D Animator"; }
+            76%, 100% { content: "Video Editor"; }
+        }
+        .changing-text::after {
+            content: "";
+            animation: changeText 4s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-inter">
+    <header class="bg-gray-800 bg-opacity-50 backdrop-blur-md sticky top-0 z-10 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">My Portfolio</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover:text-green-400 transition duration-300">Home</a></li>
+                    <li><a href="#about" class="hover:text-green-400 transition duration-300">About</a></li>
+                    <li><a href="#services" class="hover:text-green-400 transition duration-300">Services</a></li>
+                    <li><a href="#contact" class="hover:text-green-400 transition duration-300">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#booking" class="md:hidden text-green-400 text-2xl moving-icon">
+                <span class="inline-block">📞</span>
+            </a>
+        </div>
+    </header>
+
+    <section id="home" class="container mx-auto px-4 py-20 flex flex-col md:flex-row items-center justify-center gap-10">
+        <div class="md:w-1/2 text-center md:text-left">
+            <h1 class="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                Hi, I'm <span class="text-white"> METRO JAY</span>
+            </h1>
+            <h2 class="text-2xl mb-6">
+                I'm a <span class="changing-text text-green-400 font-semibold"></span>
+            </h2>
+            <p class="text-gray-300 mb-8">
+                A versatile professional passionate about creating impactful visual experiences and functional web solutions.
+            </p>
+            <a href="#services" class="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-3 rounded-full hover:from-green-600 hover:to-blue-600 transition duration-300">
+                Explore My Services
+            </a>
+        </div>
+        <div class="md:w-1/2">
+            <div class="glowing-box rounded-lg p-6 shadow-lg">
+                <img src="placeholder-image.jpg" alt="Profile Picture" class="w-full rounded-lg">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-gray-800 bg-opacity-50 backdrop-blur-md py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl font-bold mb-6 text-green-400">About Me</h2>
+                <p class="text-gray-300 mb-8">
+                    I am a highly skilled and creative professional with expertise in graphic design, web development, 2D/3D animation, CV writing, and video editing. I bring a unique blend of technical skills and artistic vision to every project.
+                </p>
+                <p class="text-gray-300">
+                    My goal is to help clients elevate their brand and achieve their objectives through compelling visuals and innovative solutions.
+                </p>
+            </div>
+            <div class="md:w-1/2">
+                <div class="bg-gray-700 rounded-lg p-6">
+                    <h3 class="text-xl font-semibold mb-4 text-white">Key Skills</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Graphic Design: Adobe Photoshop, Illustrator, InDesign</li>
+                        <li>Web Development: HTML, CSS, JavaScript, React</li>
+                        <li>2D/3D Animation: Blender, After Effects</li>
+                        <li>CV Writing: ATS Optimization, Professional Formatting</li>
+                        <li>Video Editing: Adobe Premiere Pro, Final Cut Pro</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="container mx-auto px-4 py-20">
+        <h2 class="text-3xl font-bold mb-12 text-center text-green-400">My Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                <h3 class="text-xl font-semibold mb-4 text-white">Graphic Design</h3>
+                <p class="text-gray-300 mb-4">
+                    Branding, logo design, print materials, social media graphics, and more.
+                </p>
+                <ul class="list-disc list-inside text-gray-400">
+                    <li>Logo Design</li>
+                    <li>Brand Identity</li>
+                    <li>Print Collateral</li>
+                    <li>Social Media Graphics</li>
+                </ul>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                <h3 class="text-xl font-semibold mb-4 text-white">Web Development</h3>
+                <p class="text-gray-300 mb-4">
+                    Full-stack development, responsive design, e-commerce solutions, and more.
+                </p>
+                <ul class="list-disc list-inside text-gray-400">
+                    <li>Front-End Development</li>
+                    <li>Back-End Development</li>
+                    <li>Responsive Design</li>
+                    <li>E-commerce Solutions</li>
+                </ul>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                <h3 class="text-xl font-semibold mb-4 text-white">2D/3D Animation</h3>
+                <p class="text-gray-300 mb-4">
+                    Character animation, motion graphics, visual effects, and more.
+                </p>
+                <ul class="list-disc list-inside text-gray-400">
+                    <li>Character Animation</li>
+                    <li>Motion Graphics</li>
+                    <li>Visual Effects</li>
+                    <li>3D Modeling</li>
+                </ul>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                <h3 class="text-xl font-semibold mb-4 text-white">CV Writing</h3>
+                <p class="text-gray-300 mb-4">
+                    Professional CV writing and editing services to help you land your dream job.
+                </p>
+                <ul class="list-disc list-inside text-gray-400">
+                    <li>CV Writing</li>
+                    <li>Resume Editing</li>
+                    <li>ATS Optimization</li>
+                    <li>Cover Letter</li>
+                </ul>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                <h3 class="text-xl font-semibold mb-4 text-white">Video Editing</h3>
+                <p class="text-gray-300 mb-4">
+                    Video editing, post-production, motion graphics, and more.
+                </p>
+                <ul class="list-disc list-inside text-gray-400">
+                    <li>Video Editing</li>
+                    <li>Post-Production</li>
+                    <li>Motion Graphics</li>
+                    <li>Color Grading</li>
+                </ul>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition duration-300">
+                <h3 class="text-xl font-semibold mb-4 text-white">Social Media Management</h3>
+                <p class="text-gray-300 mb-4">
+                    Social media strategy, content creation, and community management.
+                </p>
+                <ul class="list-disc list-inside text-gray-400">
+                    <li>Content Creation</li>
+                    <li>Community Management</li>
+                    <li>Social Media Strategy</li>
+                    <li>Platform Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" class="bg-gray-800 bg-opacity-50 backdrop-blur-md py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8 text-green-400">Book a Service</h2>
+            <a href="#contact" class="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-3 rounded-full hover:from-green-600 hover:to-blue-600 transition duration-300 text-lg">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="container mx-auto px-4 py-20">
+        <h2 class="text-3xl font-bold mb-12 text-center text-green-400">Contact Me</h2>
+        <div class="bg-gray-800 rounded-lg p-8 shadow-lg">
+            <form id="contact-form">
+                <div class="mb-6">
+                    <label for="name" class="block text-gray-200 text-sm font-bold mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 rounded-md">
+                    <div id="name-error" class="text-red-500 text-xs italic" style="display: none;"></div>
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-200 text-sm font-bold mb-2">Your Email</label>
+                    <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 rounded-md">
+                    <div id="email-error" class="text-red-500 text-xs italic" style="display: none;"></div>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-200 text-sm font-bold mb-2">Your Message</label>
+                    <textarea id="message" name="message" required class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-gray-700 border-gray-600 rounded-md h-32 resize-y"></textarea>
+                    <div id="message-error" class="text-red-500 text-xs italic" style="display: none;"></div>
+                </div>
+                <button type="submit" class="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-3 rounded-full hover:from-green-600 hover:to-blue-600 transition duration-300 w-full md:w-auto">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 bg-opacity-50 backdrop-blur-md py-6">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            &copy; 2025 ... 2026 Metro Jay. All rights reserved.
+            &copy; (0762462238) <br>
+
+            <div class="mt-2">
+                <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300 mx-2">LinkedIn</a>
+                <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300 mx-2">GitHub</a>
+                <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300 mx-2">Twitter</a>
+            <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300 mx-2">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300 mx-2">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-green-400 transition duration-300 mx-2">Contact</a>
+
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for interactive elements (optional, for demonstration)
+        // You can add more complex interactions here, like form validation,
+        // dynamic content updates, or animations using libraries like GSAP.
+        const movingIcon = document.querySelector('.moving-icon');
+        if (movingIcon) {
+            movingIcon.addEventListener('click', () => {
+                alert('Booking/Help section coming soon!');
+            });
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            let name = document.getElementById('name').value.trim();
+            let email = document.getElementById('email').value.trim();
+            let message = document.getElementById('message').value.trim();
+
+            let nameError = document.getElementById('name-error');
+            let emailError = document.getElementById('email-error');
+            let messageError = document.getElementById('message-error');
+
+            let isValid = true;
+
+            if (name === '') {
+                nameError.textContent = 'Please enter your name.';
+                nameError.style.display = 'block';
+                isValid = false;
+            } else {
+                nameError.style.display = 'none';
+            }
+
+            if (email === '') {
+                emailError.textContent = 'Please enter your email address.';
+                emailError.style.display = 'block';
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                emailError.textContent = 'Please enter a valid email address.';
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                emailError.style.display = 'none';
+            }
+
+            if (message === '') {
+                messageError.textContent = 'Please enter your message.';
+                messageError.style.display = 'block';
+                isValid = false;
+            } else {
+                messageError.style.display = 'none';
+            }
+
+            if (isValid) {
+                // Simulate form submission (replace with actual submission logic)
+                console.log('Form submitted with:', { name, email, message });
+                alert('Your message has been sent! (Simulated)');
+
+                // Clear the form fields
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            }
+        });
+
+        function isValidEmail(email) {
+            // Basic email validation regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+</html>
+<!-- End of HTML Document -->
